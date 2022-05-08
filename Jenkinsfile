@@ -7,10 +7,14 @@ pipeline {
 			}
 		}
 		stage('Test') {
-			sh 'echo Stage2: this is the test stage'
+			steps {
+				sh 'echo Stage2: this is the test stage'
+			}
 		}
 		stage('Deploy') {
-			sh 'echo Stage3 : this is deploy stage'
+			steps {
+				sh 'echo Stage3 : this is deploy stage'
+			}
 		}
 	}	
 }
